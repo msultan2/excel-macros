@@ -1,0 +1,1875 @@
+program:
+(
+time: 1210752460
+vers: 3.0
+gencompat: 0
+)
+folder:
+(
+name: System
+global: 1
+readonly: 1
+card:
+(
+name: True
+desc: "The system constant True"
+type: boolean
+readonly: 1
+length: 1
+cval: True
+)
+card:
+(
+name: False
+desc: "The system constant False"
+type: boolean
+readonly: 1
+length: 1
+cval: False
+)
+folder:
+(
+name: Constants
+readonly: 1
+card:
+(
+name: MSTokenLen
+desc: "The number of storage characters (bytes) used by an MS Token"
+type: number
+readonly: 1
+length: 2
+cval: 41
+)
+card:
+(
+name: EmptyMSToken
+desc: "An MS Token with a constant empty value"
+type: MStoken
+readonly: 1
+)
+card:
+(
+name: Spaces
+desc: "The system constant all blanks"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: " "
+)
+card:
+(
+name: Zeros
+desc: "The system constant all 0's"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: 0
+)
+card:
+(
+name: LowValues
+desc: "The system constant all binary zeros"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \00
+)
+card:
+(
+name: HighValues
+desc: "The system constant all binary ones"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \7f
+)
+card:
+(
+name: None
+desc: "The string 'None'"
+type: string
+readonly: 1
+length: 4
+cval: None
+)
+card:
+(
+name: Any
+desc: "The string 'Any'"
+type: string
+readonly: 1
+length: 3
+cval: Any
+)
+card:
+(
+name: All
+desc: "The string 'All'"
+type: string
+readonly: 1
+length: 3
+cval: All
+)
+card:
+(
+name: Flush
+desc: "The string 'flush' [for DTMF/Player Resource Control]"
+type: string
+readonly: 1
+length: 5
+cval: flush
+)
+card:
+(
+name: On
+desc: "The string 'on' [for Resource Control]"
+type: string
+readonly: 1
+length: 2
+cval: on
+)
+card:
+(
+name: Off
+desc: "The string 'off' [for Resource Control]"
+type: string
+readonly: 1
+length: 3
+cval: off
+)
+card:
+(
+name: Speech
+desc: "The string 'S' [Input type 'Speech']"
+type: string
+readonly: 1
+length: 1
+cval: S
+)
+card:
+(
+name: DTMF
+desc: "The string 'D' [Input type 'DTMF']"
+type: string
+readonly: 1
+length: 1
+cval: D
+)
+)
+card:
+(
+name: LastSelection
+desc: "The most recent value entered in a Select Block"
+type: string
+readonly: 1
+length: 1
+)
+card:
+(
+name: LastEntry
+desc: "The most recent value entered in a Read Phone Block"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: LastEntryLen
+desc: "The number of characters in LastEntry"
+type: number
+readonly: 1
+length: 3
+)
+card:
+(
+name: LastCondition
+desc: "The name of the most recently occurring condition"
+type: string
+readonly: 1
+length: 12
+)
+card:
+(
+name: ConditionData
+desc: "The optional data from the most recently occurring condition"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: ItemPrefix
+desc: "The language prefix for the current vocabulary"
+type: string
+length: 10
+)
+card:
+(
+name: DialedNumber
+desc: "The dialed number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: DialedNumberLen
+desc: "The length of DialedNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: CallerNumber
+desc: "The caller's number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: CallerNumberLen
+desc: "The length of CallerNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: AutoDetectTime
+desc: "Auto_Identify input detect timeout (in seconds)"
+type: number
+length: 7
+cval: 10
+)
+card:
+(
+name: DefaultCID
+desc: "Default Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultOutPool
+desc: "Default Pool for Transfer"
+type: string
+readonly: 1
+length: 128
+cval: line.out
+)
+card:
+(
+name: TransferCID
+desc: "Transfer Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultTTSRsc
+desc: "Default Text-to-Speech Resource"
+type: string
+length: 128
+cval: extts-b
+)
+card:
+(
+name: ApplicationNumber
+desc: "The application number"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: SystemNumber
+desc: "The system number on which the application is executing"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: CallNotConnected
+desc: "True if the application is not connected to a call"
+type: boolean
+readonly: 1
+length: 1
+)
+card:
+(
+name: NumberOfRecords
+desc: "The number of deleted records in Delete operation with generic key"
+type: number
+readonly: 1
+length: 6
+)
+card:
+(
+name: RecordLength
+desc: "The length of a retrieved record or recorded caller message"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: TTSRscMode
+desc: "Text-to-Speech Resource mode"
+type: string
+length: 64
+cval: NORM
+)
+folder:
+(
+name: SQL_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from RDBMS server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: RdbmsMsg
+desc: "Return Error/Info Message from RDBMS server"
+type: string
+readonly: 1
+length: 256
+)
+)
+folder:
+(
+name: CORBA_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from CORBA server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: CorbaMsg
+desc: "Return Error/Info Message from CORBA server"
+type: string
+readonly: 1
+length: 256
+)
+)
+union:
+(
+name: MapCursorRead
+hidden: 1
+card:
+(
+name: MapRealCursor
+type: string
+hidden: 1
+length: 6
+)
+folder:
+(
+name: MapRedefCursor
+hidden: 1
+card:
+(
+name: MapCursorRow
+type: number
+hidden: 1
+length: 3
+)
+card:
+(
+name: MapCursorCol
+type: number
+hidden: 1
+length: 3
+)
+)
+)
+union:
+(
+name: ExtendedToken
+hidden: 1
+card:
+(
+name: Full
+type: string
+hidden: 1
+length: 51
+)
+folder:
+(
+name: Section
+hidden: 1
+card:
+(
+name: Token
+type: string
+hidden: 1
+length: 41
+)
+card:
+(
+name: Extension
+type: string
+hidden: 1
+length: 10
+)
+)
+)
+)
+union:
+(
+name: xml
+folder:
+(
+name: xmlrpc
+folder:
+(
+name: Ericxmlrpcv1_2
+union:
+(
+name: StandardVoucherRefillTRequest
+folder:
+(
+name: StandardVoucherRefillTRequest
+card:
+(
+name: Function
+type: string
+length: 32
+cval: StandardVoucherRefillT
+)
+card:
+(
+name: version
+type: string
+length: 5
+cval: 1.2
+)
+card:
+(
+name: originNodeType
+type: string
+length: 32
+)
+card:
+(
+name: originHostName
+type: string
+length: 32
+)
+card:
+(
+name: originTransactionID
+type: string
+length: 32
+)
+union:
+(
+name: originTimeStamp
+card:
+(
+name: DateYYYYMMDDHHMMSS
+type: string
+length: 14
+)
+folder:
+(
+name: Date
+card:
+(
+name: YYYY
+type: string
+length: 4
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: DD
+type: string
+length: 2
+)
+card:
+(
+name: HH
+type: string
+length: 2
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: SS
+type: string
+length: 2
+)
+)
+)
+card:
+(
+name: subscriberNumberNAI
+type: number
+length: 2
+)
+card:
+(
+name: subscriberNumber
+type: string
+length: 20
+)
+card:
+(
+name: activationNumber
+type: string
+length: 20
+)
+card:
+(
+name: messageCapabilityFlag
+type: string
+length: 10
+)
+card:
+(
+name: externalData1
+type: string
+length: 128
+)
+card:
+(
+name: externalData2
+type: string
+length: 128
+)
+card:
+(
+name: locationNumber
+type: string
+length: 20
+)
+card:
+(
+name: locationNumberNAI
+type: number
+length: 2
+)
+card:
+(
+name: selectedOption
+type: number
+length: 5
+)
+card:
+(
+name: terminator
+type: string
+length: 1
+cval: X
+)
+)
+card:
+(
+name: String
+type: string
+length: 485
+cval: 1.2
+)
+)
+union:
+(
+name: StandardVoucherRefillTResponse
+folder:
+(
+name: StandardVoucherRefillTResponse
+card:
+(
+name: Function
+type: string
+length: 32
+cval: StandardVoucherRefillT
+)
+card:
+(
+name: version
+type: string
+length: 5
+cval: 1.2
+)
+card:
+(
+name: serviceClassCurrent
+type: number
+length: 5
+)
+card:
+(
+name: currency1
+type: string
+length: 4
+)
+card:
+(
+name: currency2
+type: string
+length: 4
+)
+card:
+(
+name: rechargeAmount1PromoTotal
+type: string
+length: 15
+)
+card:
+(
+name: rechargeAmount2PromoTotal
+type: string
+length: 15
+)
+card:
+(
+name: rechargeAmount1MainTotal
+type: string
+length: 15
+)
+card:
+(
+name: rechargeAmount2MainTotal
+type: string
+length: 15
+)
+folder:
+(
+name: dedicatedAccountInformation
+card:
+(
+name: numofdedicatedAccountInformation
+type: number
+length: 3
+)
+folder:
+(
+name: dedicatedAccountInformation0
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation1
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation2
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation3
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation4
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation5
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation6
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation7
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation8
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+folder:
+(
+name: dedicatedAccountInformation9
+card:
+(
+name: dedicatedAccountID
+type: number
+length: 3
+)
+card:
+(
+name: rechargeAmount1DedicatedTotal
+type: string
+length: 18
+)
+card:
+(
+name: rechargeAmount2DedicatedTotal
+type: string
+length: 18
+)
+)
+)
+card:
+(
+name: accountValueAfter1
+type: string
+length: 15
+)
+card:
+(
+name: accountValueAfter2
+type: string
+length: 15
+)
+union:
+(
+name: supervisionDateAfter
+card:
+(
+name: DateYYYYMMDDHHMMSS
+type: string
+length: 14
+)
+folder:
+(
+name: Date
+card:
+(
+name: YYYY
+type: string
+length: 4
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: DD
+type: string
+length: 2
+)
+card:
+(
+name: HH
+type: string
+length: 2
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: SS
+type: string
+length: 2
+)
+)
+)
+card:
+(
+name: supervisionDaysTotalExt
+type: number
+length: 5
+)
+card:
+(
+name: supervisionDaysPromoExt
+type: number
+length: 5
+)
+union:
+(
+name: serviceFeeDateAfter
+card:
+(
+name: DateYYYYMMDDHHMMSS
+type: string
+length: 14
+)
+folder:
+(
+name: Date
+card:
+(
+name: YYYY
+type: string
+length: 4
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: DD
+type: string
+length: 2
+)
+card:
+(
+name: HH
+type: string
+length: 2
+)
+card:
+(
+name: MM
+type: string
+length: 2
+)
+card:
+(
+name: SS
+type: string
+length: 2
+)
+)
+)
+card:
+(
+name: serviceFeeDaysTotalExt
+type: number
+length: 5
+)
+card:
+(
+name: serviceFeeDaysPromoExt
+type: number
+length: 5
+)
+card:
+(
+name: promotionAnnouncementCode
+type: number
+length: 5
+)
+card:
+(
+name: currentLanguageID
+type: number
+length: 2
+)
+card:
+(
+name: refillBarredFlag
+type: string
+length: 2
+)
+card:
+(
+name: refillFraudCount
+type: number
+length: 3
+)
+card:
+(
+name: responseCode
+type: number
+length: 4
+)
+card:
+(
+name: terminator
+type: string
+length: 1
+cval: X
+)
+)
+card:
+(
+name: String
+type: string
+length: 600
+cval: 1.2
+)
+)
+)
+folder:
+(
+name: Constants
+card:
+(
+name: OriginHostname
+type: string
+length: 20
+cval: TESTMPS
+)
+card:
+(
+name: OriginHosttype
+type: string
+length: 20
+cval: EXT
+)
+card:
+(
+name: DefaultCurrency
+type: string
+length: 20
+cval: EGP
+)
+)
+)
+card:
+(
+name: Params
+type: string
+length: 1497
+)
+)
+folder:
+(
+name: TransactionId
+shared: 1
+card:
+(
+name: TransactionID
+type: number
+length: 1
+)
+)
+folder:
+(
+name: Java
+folder:
+(
+name: reloadconfig
+card:
+(
+name: class
+type: string
+length: 25
+cval: XmlrpcClient
+)
+card:
+(
+name: method
+type: string
+length: 13
+cval: reloadconfig
+)
+card:
+(
+name: prm
+occurs: 2
+type: string
+length: 16
+)
+)
+folder:
+(
+name: Timeout
+card:
+(
+name: timeout
+type: number
+length: 5
+)
+)
+folder:
+(
+name: Call
+card:
+(
+name: methref
+type: string
+length: 10
+)
+card:
+(
+name: val
+occurs: 2
+type: string
+length: 4048
+)
+)
+folder:
+(
+name: xmlrpc
+card:
+(
+name: class
+type: string
+length: 25
+cval: XmlrpcClient
+)
+card:
+(
+name: method
+type: string
+length: 13
+cval: xmlrpccall
+)
+card:
+(
+name: prm
+occurs: 2
+type: string
+length: 16
+cval: "\"String\""
+)
+)
+)
+folder:
+(
+name: K
+card:
+(
+name: MSISDN
+type: string
+length: 9
+)
+card:
+(
+name: CallString
+type: number
+length: 3
+cval: 1
+)
+)
+folder:
+(
+name: Data
+card:
+(
+name: msg
+type: string
+length: 160
+)
+card:
+(
+name: resource
+type: string
+length: 6
+cval: jservd
+)
+)
+folder:
+(
+name: AVS
+card:
+(
+name: buf
+type: string
+length: 2000
+)
+card:
+(
+name: buflen
+type: number
+length: 3
+)
+)
+param:
+(
+name: param
+card:
+(
+name: msisdn
+desc: MSISDN
+type: string
+length: 20
+)
+card:
+(
+name: vouchernumber
+desc: "Voucher Number"
+type: string
+length: 20
+)
+card:
+(
+name: ResponseCode
+desc: "Response Code"
+type: number
+return: 1
+length: 4
+)
+card:
+(
+name: rechargeAmount1MainTotal
+desc: "Charged Amount"
+type: string
+return: 1
+length: 15
+)
+card:
+(
+name: refillFraudCount
+desc: "Refill Count"
+type: number
+length: 3
+)
+card:
+(
+name: refillBarredFlag
+desc: "Refill Barred Flag"
+type: string
+length: 2
+)
+)
+datafiles:
+(
+)
+block:
+(
+name: "Standard Voucher Refill"
+X: 0
+Y: 0
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 0
+height: 0
+block:
+(
+name: Entry
+X: 47
+Y: 29
+nodelete: 1
+type: Entry
+next_block: Failure
+)
+block:
+(
+name: Exit
+X: 80
+Y: 582
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: "-> EndPgm"
+X: 134
+Y: 585
+noicon: 1
+type: Connector
+Connector:
+(
+type: dest
+)
+next_block: Exit
+)
+block:
+(
+name: Failure
+X: 83
+Y: 13
+type: Context
+Context:
+(
+width: 490
+height: 683
+block:
+(
+name: "  $getfail  "
+X: 286
+Y: 79
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: ErrMsg
+)
+block:
+(
+name: "    $inf    "
+X: 135
+Y: 77
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: ErrMsg
+)
+block:
+(
+name: FailMsg
+X: 235
+Y: 281
+type: System
+System:
+(
+function: Display
+operand1: Data.msg
+)
+next_block: "EndPgm ->"
+)
+block:
+(
+name: "EndPgm ->"
+X: 228
+Y: 377
+noicon: 1
+type: Connector
+Connector:
+(
+type: source
+)
+)
+block:
+(
+name: ErrMsg
+X: 235
+Y: 191
+type: Compute
+Assign:
+(
+assign: "Data.msg <- \"error condition \" + System.LastCondition + \" : \" + System.ConditionData "
+)
+next_block: FailMsg
+)
+block:
+(
+name: "    $of     "
+X: 79
+Y: 164
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: ErrMsg
+)
+block:
+(
+name: ctrlrsrcfail
+X: 348
+Y: 187
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: ErrMsg
+)
+)
+next_block: GetJava
+)
+block:
+(
+name: "get date time"
+X: 450
+Y: 193
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 600
+height: 682
+param:
+(
+name: originTimeStamp
+card:
+(
+name: DateYYYYMMDDHHMMSS
+type: string
+return: 1
+length: 14
+)
+)
+block:
+(
+name: Entry
+X: 287
+Y: 20
+nodelete: 1
+type: Entry
+next_block: "date time"
+)
+block:
+(
+name: Exit
+X: 287
+Y: 636
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: "date time"
+X: 271
+Y: 83
+type: System
+System:
+(
+function: DateTime
+operand1: originTimeStamp.DateYYYYMMDDHHMMSS
+)
+next_block: Exit
+)
+)
+next_block: Connector2
+)
+block:
+(
+name: Connector1
+X: 474
+Y: 14
+type: Connector
+Connector:
+(
+type: anchor
+)
+next_block: gettransid
+)
+block:
+(
+name: Connector2
+X: 474
+Y: 307
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+block:
+(
+name: gettransid
+X: 450
+Y: 82
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 600
+height: 682
+param:
+(
+name: param
+card:
+(
+name: tranactionid
+type: string
+return: 1
+length: 20
+)
+)
+union:
+(
+name: local
+card:
+(
+name: allTransId
+type: string
+length: 20
+)
+folder:
+(
+name: parts
+card:
+(
+name: MPSNo
+type: number
+length: 3
+)
+card:
+(
+name: LineNo
+type: number
+length: 3
+)
+card:
+(
+name: Datetime
+type: string
+length: 14
+)
+)
+)
+block:
+(
+name: Entry
+X: 287
+Y: 20
+nodelete: 1
+type: Entry
+next_block: datetime
+)
+block:
+(
+name: Exit
+X: 287
+Y: 636
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: Comput1
+X: 271
+Y: 299
+type: Compute
+Assign:
+(
+assign: "local.parts.MPSNo <- System.SystemNumber "
+assign: "local.parts.LineNo <- System.ApplicationNumber "
+assign: "param.tranactionid <- local.allTransId "
+)
+next_block: Exit
+)
+block:
+(
+name: datetime
+X: 271
+Y: 193
+type: System
+System:
+(
+function: GMT
+operand1: local.parts.Datetime
+)
+next_block: Comput1
+)
+)
+next_block: "get date time"
+)
+block:
+(
+name: set
+X: 243
+Y: 83
+notes: "get the method reference for the method paymentString"
+type: Compute
+Assign:
+(
+assign: "AVS.buf {=ToAVS} Java.xmlrpc "
+)
+next_block: "Set method"
+)
+block:
+(
+name: GetJava
+X: 243
+Y: 13
+notes: "Get the jsb resource"
+type: Resource
+Resource:
+(
+resource: jsb
+wait: 1
+operation: Get
+cid: ""
+line_cid: System.DefaultCID
+)
+next_block: set
+)
+block:
+(
+name: "Set method"
+X: 243
+Y: 156
+type: Resource
+Resource:
+(
+resource: jsb
+wait: 1
+operation: Control
+message: AVS.buf
+cid: System.DefaultCID
+)
+next_block: CompleteMsg
+)
+block:
+(
+name: Msg
+X: 243
+Y: 304
+comment: 1
+type: System
+System:
+(
+function: Display
+operand1: Data.msg
+)
+next_block: SndRcv
+)
+block:
+(
+name: CompleteMsg
+X: 243
+Y: 227
+notes: "Got the method reference back from jsb for the method paymentString through condition 'oc' and condition data.
+
+condition data contains the method reference.
+"
+type: Compute
+Assign:
+(
+assign: "Java.Call.methref <- System.ConditionData "
+assign: "Data.msg <- \"received condition \" + System.LastCondition + \" : \" + Java.Call.methref "
+)
+next_block: Msg
+)
+block:
+(
+name: Free
+X: 243
+Y: 494
+type: Resource
+Resource:
+(
+resource: jsb
+wait: 1
+operation: Free
+cid: System.DefaultCID
+)
+next_block: Exit
+)
+block:
+(
+name: SndRcv
+X: 235
+Y: 396
+notes: "call the method paymentString using methodref and param values and receive the value back."
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 600
+height: 682
+block:
+(
+name: Entry
+X: 287
+Y: 20
+nodelete: 1
+type: Entry
+next_block: Refer9
+)
+block:
+(
+name: Exit
+X: 287
+Y: 670
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: Receive
+X: 271
+Y: 415
+type: Resource
+Resource:
+(
+resource: jsb
+wait: 1
+operation: Receive
+message: xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.String
+cid: System.DefaultCID
+)
+next_block: Received
+)
+block:
+(
+name: Received
+X: 271
+Y: 490
+comment: 1
+type: System
+System:
+(
+function: Display
+operand1: "\"Received: \" "
+operand2: xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.String
+)
+next_block: Exit
+)
+block:
+(
+name: standardvoucherrefill
+X: 271
+Y: 269
+type: Compute
+Assign:
+(
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.originNodeType <- xml.xmlrpc.Constants.OriginHosttype "
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.originHostName <- xml.xmlrpc.Constants.OriginHostname "
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.subscriberNumberNAI <- 2"
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.subscriberNumber <- param.msisdn "
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.activationNumber <- param.vouchernumber "
+assign: "xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.selectedOption <- 1"
+assign: "Java.Call.val ( 1 ) <- xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.String "
+assign: "AVS.buf {=ToAVS} Java.Call "
+)
+next_block: trim-spaces
+)
+block:
+(
+name: Refer9
+X: 263
+Y: 69
+type: Reference
+Reference:
+(
+parm: xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.originTransactionID
+refers_to: gettransid
+)
+next_block: Refer11
+)
+block:
+(
+name: Refer11
+X: 263
+Y: 166
+type: Reference
+Reference:
+(
+parm: xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTRequest.StandardVoucherRefillTRequest.originTimeStamp.DateYYYYMMDDHHMMSS
+refers_to: "get date time"
+)
+next_block: standardvoucherrefill
+)
+block:
+(
+name: Send
+X: 276
+Y: 349
+type: Resource
+Resource:
+(
+resource: jsb
+wait: 1
+operation: Send
+message: AVS.buf
+cid: System.DefaultCID
+length: AVS.buflen
+)
+next_block: Receive
+)
+block:
+(
+name: trim-spaces
+X: 203
+Y: 323
+type: System
+System:
+(
+function: CallFunction
+operand1: "\"trim-spaces\" "
+operand2: AVS.buf
+operand3: AVS.buflen
+)
+next_block: Send
+)
+)
+next_block: Response
+)
+block:
+(
+name: Response
+X: 132
+Y: 428
+type: Compute
+Assign:
+(
+assign: "param.ResponseCode <- xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.StandardVoucherRefillTResponse.responseCode "
+assign: "param.rechargeAmount1MainTotal <- xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.StandardVoucherRefillTResponse.rechargeAmount1MainTotal "
+assign: "param.refillFraudCount <- xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.StandardVoucherRefillTResponse.refillFraudCount "
+assign: "param.refillBarredFlag <- xml.xmlrpc.Ericxmlrpcv1_2.StandardVoucherRefillTResponse.StandardVoucherRefillTResponse.refillBarredFlag "
+)
+next_block: Free
+)
+)
+)

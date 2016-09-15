@@ -1,0 +1,104 @@
+kit:
+(
+header: "UCIP ToolKit"
+user:
+(
+key: reconfig
+desc: "demand Java reload configuration"
+container: pprs/reconfig.ppr
+ifile: icons/reconfig.icon
+)
+user:
+(
+key: AccumulatorEnqT
+desc: "AccumulatorEnquiry"
+container: pprs/AccumulatorEnqT.ppr
+ifile: icons/AccumulatorEnqT.icon
+)
+user:
+(
+key: AdjustmentT
+desc: "AdjustmentT"
+container: pprs/AdjustmentT.ppr
+ifile: icons/AdjustmentT.icon
+)
+user:
+(
+key: BalanceEnqT
+desc: "BalanceEnqT"
+container: pprs/BalanceEnqT.ppr
+ifile: icons/BalanceEnqT.icon
+)
+user:
+(
+key: GetAccountDetT
+desc: "GetAccountDetT"
+container: pprs/GetAccountDetT.ppr
+ifile: icons/GetAccountDetT.icon
+)
+user:
+(
+key: GetAllowedServiceClassT
+desc: "GetAllowedServiceClassT"
+container: pprs/GetAllowedServiceClassT.ppr
+ifile: icons/GetAllowedServiceClassT.icon
+)
+user:
+(
+key: GetFafListT
+desc: "GetFafListT"
+container: pprs/GetFafListT.ppr
+ifile: icons/GetFafListT.icon
+)
+user:
+(
+key: GetVoucherRefillOptsT
+desc: "GetVoucherRefillOptsT"
+container: pprs/GetVoucherRefillOptsT.ppr
+ifile: icons/GetVoucherRefillOptsT.icon
+)
+user:
+(
+key: RefillT
+desc: "RefillT"
+container: pprs/RefillT.ppr
+ifile: icons/RefillT.icon
+)
+user:
+(
+key: StandardVoucherT
+desc: "StandardVoucherT"
+container: pprs/StandardVoucherT.ppr
+ifile: icons/StandardVoucherT.icon
+)user:
+(
+key: UpdateAccountDetailsT
+desc: "UpdateAccountDetailsT"
+container: pprs/UpdateAccountDetailsT.ppr
+ifile: icons/UpdateAccountDetailsT.icon
+)user:
+(
+key: UpdateFafListT
+desc: "UpdateFafListT"
+container: pprs/UpdateFafListT.ppr
+ifile: icons/UpdateFafListT.icon
+)user:
+(
+key: UpdateServiceClassT
+desc: "UpdateServiceClassT"
+container: pprs/UpdateServiceClassT.ppr
+ifile: icons/UpdateServiceClassT.icon
+)user:
+(
+key: ValVoucherEnqT
+desc: "ValVoucherEnqT"
+container: pprs/ValVoucherEnqT.ppr
+ifile: icons/ValVoucherEnqT.icon
+)user:
+(
+key: ValVoucherEnqRefillT
+desc: "ValVoucherEnqRefillT"
+container: pprs/ValVoucherEnqRefillT.ppr
+ifile: icons/ValVoucherEnqRefillT.icon
+)
+)

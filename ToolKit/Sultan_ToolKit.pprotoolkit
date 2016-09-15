@@ -1,0 +1,47 @@
+kit:
+(
+header: "Sultan ToolKit"
+user:
+(
+key: BalanceEnqT
+desc: "BalanceEnqT tool is developed by Mohamed Sultan on 12 Apr 2008"
+container: pprs/BalanceInquiry.ppr
+ifile: icons/BalanceEnqT.icon
+)
+user:
+(
+key: RefillT
+desc: "RefillT tool is developed by Mohamed Sultan on 12 Apr 2008"
+container: pprs/RefillT.ppr
+ifile: icons/RefillT.icon
+)
+user:
+(
+key: UpdateServiceClassT
+desc: "UpdateServiceClassT tool is developed by Mohamed Sultan on 12 Apr 2008"
+container: pprs/UpdateServiceClassT.ppr
+ifile: icons/UpdateServiceClassT.icon
+)
+user:
+(
+key: StandardVoucherT
+desc: "StandardVoucherT tool is developed by Mohamed Sultan on 15 Apr 2008"
+container: pprs/StandardVoucherT.ppr
+ifile: icons/StandardVoucherT.icon
+)
+user:
+(
+key: AdjustmentT
+desc: "AdjustmentT"
+container: pprs/AdjustmentT.ppr
+ifile: icons/AdjustmentT.icon
+)
+user:                                                                           
+(                                                                               
+key: GetAccountDetT
+desc: "GetAccountDetT tool is developed by Mohamed Sultan on 18 MAY 2008"
+container: pprs/GetAccountDetT.ppr
+#ifile: icons48/vag.Icon1.icon
+ifile: icons/GetAccountDetT.icon
+)                                                                               
+)

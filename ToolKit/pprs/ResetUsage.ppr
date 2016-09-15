@@ -1,0 +1,1866 @@
+program:
+(
+time: 1208683772
+vers: 3.0
+opt:
+(
+opt:
+(
+key: O
+string: DSSIETSI
+)
+)
+gencompat: 0
+)
+folder:
+(
+name: System
+global: 1
+readonly: 1
+card:
+(
+name: True
+desc: "The system constant True"
+type: boolean
+readonly: 1
+length: 1
+cval: True
+)
+card:
+(
+name: False
+desc: "The system constant False"
+type: boolean
+readonly: 1
+length: 1
+cval: False
+)
+folder:
+(
+name: Constants
+readonly: 1
+card:
+(
+name: MSTokenLen
+desc: "The number of storage characters (bytes) used by an MS Token"
+type: number
+readonly: 1
+length: 2
+cval: 41
+)
+card:
+(
+name: EmptyMSToken
+desc: "An MS Token with a constant empty value"
+type: MStoken
+readonly: 1
+)
+card:
+(
+name: Spaces
+desc: "The system constant all blanks"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: " "
+)
+card:
+(
+name: Zeros
+desc: "The system constant all 0's"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: 0
+)
+card:
+(
+name: LowValues
+desc: "The system constant all binary zeros"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \00
+)
+card:
+(
+name: HighValues
+desc: "The system constant all binary ones"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \7f
+)
+card:
+(
+name: None
+desc: "The string 'None'"
+type: string
+readonly: 1
+length: 4
+cval: None
+)
+card:
+(
+name: Any
+desc: "The string 'Any'"
+type: string
+readonly: 1
+length: 3
+cval: Any
+)
+card:
+(
+name: All
+desc: "The string 'All'"
+type: string
+readonly: 1
+length: 3
+cval: All
+)
+card:
+(
+name: Flush
+desc: "The string 'flush' [for DTMF/Player Resource Control]"
+type: string
+readonly: 1
+length: 5
+cval: flush
+)
+card:
+(
+name: On
+desc: "The string 'on' [for Resource Control]"
+type: string
+readonly: 1
+length: 2
+cval: on
+)
+card:
+(
+name: Off
+desc: "The string 'off' [for Resource Control]"
+type: string
+readonly: 1
+length: 3
+cval: off
+)
+card:
+(
+name: Speech
+desc: "The string 'S' [Input type 'Speech']"
+type: string
+readonly: 1
+length: 1
+cval: S
+)
+card:
+(
+name: DTMF
+desc: "The string 'D' [Input type 'DTMF']"
+type: string
+readonly: 1
+length: 1
+cval: D
+)
+)
+card:
+(
+name: LastSelection
+desc: "The most recent value entered in a Select Block"
+type: string
+readonly: 1
+length: 1
+)
+card:
+(
+name: LastEntry
+desc: "The most recent value entered in a Read Phone Block"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: LastEntryLen
+desc: "The number of characters in LastEntry"
+type: number
+readonly: 1
+length: 3
+)
+card:
+(
+name: LastCondition
+desc: "The name of the most recently occurring condition"
+type: string
+readonly: 1
+length: 12
+)
+card:
+(
+name: ConditionData
+desc: "The optional data from the most recently occurring condition"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: ItemPrefix
+desc: "The language prefix for the current vocabulary"
+type: string
+length: 10
+)
+card:
+(
+name: DialedNumber
+desc: "The dialed number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: DialedNumberLen
+desc: "The length of DialedNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: CallerNumber
+desc: "The caller's number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: CallerNumberLen
+desc: "The length of CallerNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: AutoDetectTime
+desc: "Auto_Identify input detect timeout (in seconds)"
+type: number
+length: 7
+cval: 10
+)
+card:
+(
+name: DefaultCID
+desc: "Default Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultOutPool
+desc: "Default Pool for Transfer"
+type: string
+readonly: 1
+length: 128
+cval: line.out
+)
+card:
+(
+name: TransferCID
+desc: "Transfer Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultTTSRsc
+desc: "Default Text-to-Speech Resource"
+type: string
+length: 128
+cval: extts-b
+)
+card:
+(
+name: ApplicationNumber
+desc: "The application number"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: SystemNumber
+desc: "The system number on which the application is executing"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: CallNotConnected
+desc: "True if the application is not connected to a call"
+type: boolean
+readonly: 1
+length: 1
+)
+card:
+(
+name: NumberOfRecords
+desc: "The number of deleted records in Delete operation with generic key"
+type: number
+readonly: 1
+length: 6
+)
+card:
+(
+name: RecordLength
+desc: "The length of a retrieved record or recorded caller message"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: TTSRscMode
+desc: "Text-to-Speech Resource mode"
+type: string
+length: 64
+cval: NORM
+)
+folder:
+(
+name: SQL_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from RDBMS server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: RdbmsMsg
+desc: "Return Error/Info Message from RDBMS server"
+type: string
+readonly: 1
+length: 256
+)
+)
+folder:
+(
+name: CORBA_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from CORBA server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: CorbaMsg
+desc: "Return Error/Info Message from CORBA server"
+type: string
+readonly: 1
+length: 256
+)
+)
+union:
+(
+name: MapCursorRead
+hidden: 1
+card:
+(
+name: MapRealCursor
+type: string
+hidden: 1
+length: 6
+)
+folder:
+(
+name: MapRedefCursor
+hidden: 1
+card:
+(
+name: MapCursorRow
+type: number
+hidden: 1
+length: 3
+)
+card:
+(
+name: MapCursorCol
+type: number
+hidden: 1
+length: 3
+)
+)
+)
+union:
+(
+name: ExtendedToken
+hidden: 1
+card:
+(
+name: Full
+type: string
+hidden: 1
+length: 51
+)
+folder:
+(
+name: Section
+hidden: 1
+card:
+(
+name: Token
+type: string
+hidden: 1
+length: 41
+)
+card:
+(
+name: Extension
+type: string
+hidden: 1
+length: 10
+)
+)
+)
+)
+folder:
+(
+name: Func
+card:
+(
+name: with-offset
+type: number
+length: 2
+)
+card:
+(
+name: timer-value
+type: string
+length: 6
+)
+card:
+(
+name: name
+type: string
+length: 15
+)
+card:
+(
+name: return-value
+type: number
+length: 2
+)
+card:
+(
+name: maximum-value
+type: number
+length: 2
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+folder:
+(
+name: ISS7
+include: 1
+)
+folder:
+(
+name: ISS7Common
+include: 1
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+param:
+(
+name: Paramters
+card:
+(
+name: MSISDN
+desc: MSISDN
+type: string
+length: 9
+)
+card:
+(
+name: Recharge
+desc: Recharge?
+type: boolean
+length: 1
+)
+card:
+(
+name: Number_Of_Days
+desc: "# Of Days"
+type: number
+length: 3
+)
+card:
+(
+name: SuperVision
+desc: SupervisionDate
+type: string
+return: 1
+length: 8
+)
+card:
+(
+name: Status
+desc: Status
+type: string
+return: 1
+length: 2
+)
+)
+folder:
+(
+name: Local
+card:
+(
+name: Logging
+type: string
+length: 60
+)
+card:
+(
+name: Period
+type: string
+length: 3
+)
+card:
+(
+name: Temp
+type: string
+length: 3
+)
+card:
+(
+name: Flag
+type: string
+length: 1
+)
+card:
+(
+name: IVR_ID
+type: string
+length: 9
+cval: TestIVR
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+folder:
+(
+name: General
+global: 1
+card:
+(
+name: etopupStatus
+type: string
+length: 1
+)
+card:
+(
+name: supervisionDate
+type: string
+length: 10
+)
+card:
+(
+name: MSG
+type: string
+length: 165
+)
+card:
+(
+name: accountValue
+type: string
+length: 14
+)
+card:
+(
+name: Output
+type: string
+length: 500
+)
+card:
+(
+name: File_Name
+type: string
+length: 50
+cval: /opt/home/peri/log/Adjustemnt_Success_YYYYMMDD
+)
+folder:
+(
+name: VASP
+card:
+(
+name: G-ToVASProLog-File
+type: string
+length: 100
+cval: /opt/home/peri/log/858/ToVASProLog_Nortel_
+)
+card:
+(
+name: G-AdjPay-Log
+type: string
+length: 100
+)
+card:
+(
+name: G-VASPRO-Log
+type: string
+length: 100
+)
+card:
+(
+name: VASP_Server_Name
+type: string
+length: 8
+cval: HOSTNAME
+)
+card:
+(
+name: VASP_File_Name
+type: string
+length: 100
+)
+card:
+(
+name: G-VASPRO-AdjPayURL
+type: string
+length: 58
+cval: "URL:\\\"http://VASPNAME:80/VASProv/adjust_payment.asp?MSISDN="
+)
+card:
+(
+name: G-VASPRO-ReactiAmmount
+type: number
+length: 12
+)
+card:
+(
+name: G-VASPRO-ReactivationURL
+type: string
+length: 54
+cval: "URL:\\\"http://VASPNAME:80/VASProv/reactivate.asp?MSISDN="
+)
+card:
+(
+name: G-VASPRO-Req-WaiveURL
+type: string
+length: 56
+cval: "URL:\\\"http://VASPNAME:80/VASProv/getWaiveInfo.asp?MSISDN="
+)
+)
+folder:
+(
+name: SuperDardasha
+card:
+(
+name: UsageFileWrite
+type: string
+length: 250
+)
+card:
+(
+name: UsageFile
+type: string
+length: 80
+)
+card:
+(
+name: SuperDardashaStatus
+type: string
+length: 2
+)
+card:
+(
+name: SuperDardashaDates
+type: string
+length: 8
+)
+card:
+(
+name: SuperDardashaFees
+type: string
+length: 1
+)
+card:
+(
+name: SuperDardashaUsage
+type: string
+length: 12
+)
+)
+card:
+(
+name: A-MSISDN
+type: string
+length: 9
+)
+card:
+(
+name: BalanceToCheckWith
+type: number
+length: 12
+)
+card:
+(
+name: AccountBalance
+type: number
+length: 12
+)
+card:
+(
+name: MonthlyFee
+type: number
+length: 12
+cval: 000000000000
+)
+card:
+(
+name: AdjustAmmount
+type: number
+length: 12
+)
+card:
+(
+name: PaymentAmmount
+type: number
+length: 12
+)
+card:
+(
+name: CardType
+type: number
+length: 5
+cval: 00001
+)
+card:
+(
+name: RechCount
+type: number
+length: 1
+cval: 0
+)
+card:
+(
+name: G-858Log-File
+type: string
+length: 220
+cval: /opt/home/peri/log/858/858Log_Nortel_
+)
+card:
+(
+name: RechargeCard
+type: string
+length: 14
+)
+card:
+(
+name: RechargeCardLength
+type: number
+length: 2
+)
+card:
+(
+name: RevivalPromo
+type: string
+length: 5
+cval: False
+)
+card:
+(
+name: G-ExpiryDates
+type: string
+length: 8
+)
+card:
+(
+name: G-Language
+type: number
+length: 1
+)
+card:
+(
+name: G-vtcpd-resource
+type: string
+length: 10
+cval: PPAS
+)
+card:
+(
+name: G-vtcpd-CID
+type: string
+length: 20
+)
+union:
+(
+name: G-Date-Time-Comp
+card:
+(
+name: G-Date-Time-Full
+type: string
+length: 18
+)
+folder:
+(
+name: G-Date-Time-Folder
+card:
+(
+name: G-DT-YYYYMMDD
+type: string
+length: 8
+)
+card:
+(
+name: G-DT-HHMMSS
+type: string
+length: 6
+)
+card:
+(
+name: G-DT-Rest
+type: string
+length: 4
+)
+)
+)
+card:
+(
+name: G-Resource-counter
+type: number
+length: 1
+)
+)
+folder:
+(
+name: Reformated
+global: 1
+card:
+(
+name: Rel_Date_Adj_Supervision
+desc: "Relative Date Adj Supervision"
+type: string
+length: 5
+)
+card:
+(
+name: AccountValueAfter1
+type: number
+length: 12
+)
+card:
+(
+name: ServicePeriod
+type: number
+length: 8
+)
+card:
+(
+name: AccountValue1
+type: number
+length: 12
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+datafiles:
+(
+file:
+(
+filename: General.SuperDardasha.UsageFile
+scope: "Reset Usage"
+source: data
+filetype: Flat
+recordtype: Variable
+dos_comp: 0
+recsize: 100
+)
+file:
+(
+filename: General.SuperDardasha.UsageFile
+scope: "Reset Usage.858"
+source: data
+filetype: Flat
+recordtype: Variable
+dos_comp: 0
+recsize: 100
+)
+file:
+(
+filename: General.SuperDardasha.UsageFile
+scope: "Reset Usage.858"
+source: data
+filetype: Flat
+recordtype: Variable
+dos_comp: 0
+recsize: 100
+)
+)
+block:
+(
+name: "Reset Usage"
+X: 0
+Y: 0
+notes: "Rolled Back to V7 but Desc for SC900 is added."
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 0
+height: 0
+block:
+(
+name: Entry
+X: 450
+Y: 27
+nodelete: 1
+type: Entry
+next_block: "#OfDigits"
+)
+block:
+(
+name: Exit
+X: 104
+Y: 360
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: SuperDardashaUsage1
+X: 205
+Y: 77
+type: Sqldba
+Sqldba:
+(
+sqlpath: 1
+sqlbuf: "RESETSUBSCRIBERUSAGE (:General.A-MSISDN, :General.SuperDardasha.SuperDardashaStatus)"
+sqlbind: "RESETSUBSCRIBERUSAGE (:V1, :V2)"
+sqlrdbms: 1
+dbconn: -1
+dbusename: "\"vpfee\" "
+sqltime: ""
+sqldml: 10
+Nbinds: 2
+Bcards: General.A-MSISDN
+Bcards: General.SuperDardasha.SuperDardashaStatus
+Ocnt: 0
+Auto: 0
+Ncols: 0
+exception_event:
+(
+name: ALL
+X: 99
+Y: 96
+nodelete: 1
+noicon: 1
+type: Case
+next_block: SQLError
+)
+)
+next_block: VASProLog
+)
+block:
+(
+name: ResetStatus
+X: 205
+Y: 263
+type: Switch
+Switch:
+(
+else: Fail
+built: 1
+comparand: "Success: General.SuperDardasha.SuperDardashaStatus == \"0\" "
+caseblock:
+(
+name: Success
+X: 204
+Y: 355
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Exit
+)
+caseblock:
+(
+name: Fail
+X: 96
+Y: 282
+nodelete: 1
+noicon: 1
+type: Case
+next_block: SQLError
+)
+)
+)
+block:
+(
+name: Connector1
+X: 24
+Y: 184
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+block:
+(
+name: VASProLog
+X: 197
+Y: 164
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 432
+height: 494
+block:
+(
+name: WriteToFile
+X: 87
+Y: 272
+type: DiskIO
+DiskIO:
+(
+file: General.SuperDardasha.UsageFile
+operation: Write
+data: General.SuperDardasha.UsageFileWrite
+handle_event:
+(
+name: ALL
+X: 185
+Y: 312
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Connector21
+)
+)
+next_block: CloseFile
+)
+block:
+(
+name: CloseFile
+X: 88
+Y: 360
+type: DiskIO
+DiskIO:
+(
+file: General.SuperDardasha.UsageFile
+operation: Close
+handle_event:
+(
+name: ALL
+X: 168
+Y: 379
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Connector22
+)
+)
+next_block: Exit
+)
+block:
+(
+name: Entry
+X: 41
+Y: 56
+nodelete: 1
+type: Entry
+next_block: Date&Time
+)
+block:
+(
+name: Exit
+X: 104
+Y: 444
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: OpenFlip
+X: 96
+Y: 207
+type: DiskIO
+DiskIO:
+(
+file: General.SuperDardasha.UsageFile
+operation: Open
+handle_event:
+(
+name: ALL
+X: 179
+Y: 226
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Connector20
+)
+)
+next_block: WriteToFile
+)
+block:
+(
+name: Date&Time
+X: 88
+Y: 19
+type: System
+System:
+(
+function: DateTime
+operand1: General.G-Date-Time-Comp.G-Date-Time-Full
+)
+next_block: usage
+)
+block:
+(
+name: usage
+X: 97
+Y: 125
+type: Compute
+Assign:
+(
+assign: "General.SuperDardasha.UsageFileWrite <- \"\\n\" + General.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-YYYYMMDD + General.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-HHMMSS + \",\" + GSS7.ISUP-Message-In.IAMX.IAM-CGPN.IAM-CGPN-ADDRESS + \" \" + \"OldUsage=\" + General.SuperDardasha.SuperDardashaUsage + \"OldFees=\" + General.SuperDardasha.SuperDardashaFees + \" \" + \"reset usage status=\" + General.SuperDardasha.SuperDardashaStatus "
+assign: "General.SuperDardasha.UsageFile <- \"/opt/home/peri/log/858/SuperDardashaUasge_\" + General.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-YYYYMMDD "
+)
+next_block: OpenFlip
+)
+block:
+(
+name: Connector20
+X: 252
+Y: 223
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector21
+)
+block:
+(
+name: Connector21
+X: 252
+Y: 309
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector22
+)
+block:
+(
+name: Connector22
+X: 243
+Y: 376
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector23
+)
+block:
+(
+name: Connector23
+X: 243
+Y: 444
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Exit
+)
+)
+next_block: ResetStatus
+)
+block:
+(
+name: SQLError
+X: 86
+Y: 168
+type: Speak
+Speak:
+(
+cid: System.DefaultCID
+lockkb: 0
+input_mode: Accept_Touch-Tones_During/After_Prompt
+phraselist:
+(
+phrase:
+(
+ref: 858-Try-Later
+file: /mmf/peri/858.mmi
+type: vocab
+)
+)
+)
+next_block: Connector1
+)
+block:
+(
+name: Prepare
+X: 582
+Y: 227
+type: Compute
+Assign:
+(
+assign: "Local.IVR_ID <- \"Testmps\" "
+)
+next_block: Switch1
+)
+block:
+(
+name: Switch1
+X: 579
+Y: 304
+type: Switch
+Switch:
+(
+else: BuyValid
+built: 1
+comparand: "Recharge: Paramters.Recharge == System.True "
+caseblock:
+(
+name: Recharge
+X: 461
+Y: 323
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Comput11
+)
+caseblock:
+(
+name: BuyValid
+X: 695
+Y: 323
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Comput111
+)
+)
+)
+block:
+(
+name: Comput11
+X: 465
+Y: 380
+type: Compute
+Assign:
+(
+assign: "Local.Flag <- \"1\" "
+)
+next_block: SuperDardashaUsag
+)
+block:
+(
+name: Comput111
+X: 699
+Y: 380
+type: Compute
+Assign:
+(
+assign: "Local.Flag <- \"2\" "
+assign: "Local.Logging <- \"Buy Validity,Status\" "
+)
+next_block: SuperDardashaUsag
+)
+block:
+(
+name: SuperDardashaUsag
+X: 575
+Y: 380
+type: Sqldba
+Sqldba:
+(
+sqlpath: 1
+sqlbuf: "RESETSUBSCRIBERUSAGE (:Paramters.MSISDN,:Local.Period,:Local.Flag,:Local.IVR_ID,:Paramters.SuperVision,:Paramters.Status)"
+sqlbind: "RESETSUBSCRIBERUSAGE (:V1,:V2,:V3,:V4,:V5,:V6)"
+sqlrdbms: 1
+dbconn: -1
+dbusename: "\"Super_Dardasha\" "
+sqltime: ""
+sqldml: 10
+Nbinds: 6
+Bcards: Paramters.MSISDN
+Bcards: Local.Period
+Bcards: Local.Flag
+Bcards: Local.IVR_ID
+Bcards: Paramters.SuperVision
+Bcards: Paramters.Status
+Ocnt: 0
+Auto: 0
+Ncols: 0
+exception_event:
+(
+name: ALL
+X: 707
+Y: 460
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Comput11111
+)
+)
+next_block: ResetStatus1
+)
+block:
+(
+name: Refer2
+X: 854
+Y: 526
+type: Reference
+Reference:
+(
+refers_to: SQLError
+)
+next_block: Connector2
+)
+block:
+(
+name: Connector2
+X: 930
+Y: 542
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+block:
+(
+name: ResetStatus1
+X: 575
+Y: 526
+type: Switch
+Switch:
+(
+else: Fail
+built: 1
+comparand: "Success: Paramters.Status == \"0\" "
+caseblock:
+(
+name: Success
+X: 506
+Y: 545
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Comput1111
+)
+caseblock:
+(
+name: Fail
+X: 643
+Y: 545
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Comput11111
+)
+)
+)
+block:
+(
+name: Connector3
+X: 220
+Y: 27
+type: Connector
+Connector:
+(
+type: anchor
+)
+next_block: SuperDardashaUsage1
+)
+block:
+(
+name: "#OfDigits"
+X: 582
+Y: 11
+type: Switch
+Switch:
+(
+else: Error
+built: 1
+comparand: "1-9: Paramters.Number_Of_Days <= 9 {And} Paramters.Number_Of_Days >= 1"
+comparand: "10-99: Paramters.Number_Of_Days <= 99 {And} Paramters.Number_Of_Days >= 10"
+comparand: "100-999: Paramters.Number_Of_Days <= 999 {And} Paramters.Number_Of_Days >= 100"
+caseblock:
+(
+name: 1-9
+X: 496
+Y: 55
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Prepare21
+)
+caseblock:
+(
+name: 10-99
+X: 587
+Y: 84
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Prepare211
+)
+caseblock:
+(
+name: 100-999
+X: 697
+Y: 59
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Prepare212
+)
+caseblock:
+(
+name: Error
+X: 919
+Y: 30
+nodelete: 1
+noicon: 1
+type: Case
+next_block: Refer21
+)
+)
+)
+block:
+(
+name: Refer21
+X: 914
+Y: 99
+type: Reference
+Reference:
+(
+refers_to: SQLError
+)
+next_block: Connector2
+)
+block:
+(
+name: Prepare21
+X: 486
+Y: 120
+type: Compute
+Assign:
+(
+assign: "Local.Temp {=ToString} Paramters.Number_Of_Days "
+assign: "Local.Period <- \"00\" + Local.Temp "
+)
+next_block: Connector5
+)
+block:
+(
+name: Prepare211
+X: 582
+Y: 128
+type: Compute
+Assign:
+(
+assign: "Local.Temp {=ToString} Paramters.Number_Of_Days "
+assign: "Local.Period <- \"0\" + Local.Temp "
+)
+next_block: Prepare
+)
+block:
+(
+name: Prepare212
+X: 698
+Y: 125
+type: Compute
+Assign:
+(
+assign: "Local.Temp {=ToString} Paramters.Number_Of_Days "
+assign: "Local.Period <- Local.Temp "
+)
+next_block: Connector4
+)
+block:
+(
+name: Connector4
+X: 714
+Y: 243
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Prepare
+)
+block:
+(
+name: Connector5
+X: 502
+Y: 243
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Prepare
+)
+block:
+(
+name: System2
+X: 268
+Y: 526
+type: System
+System:
+(
+function: Display
+operand1: Paramters.SuperVision
+operand2: "\", Status:\" "
+operand3: Paramters.Status
+)
+next_block: Exit
+)
+block:
+(
+name: Logging
+X: 332
+Y: 519
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 1243
+height: 741
+param:
+(
+name: Parmeters
+card:
+(
+name: Success
+desc: Success?
+type: boolean
+length: 1
+)
+card:
+(
+name: Content
+desc: Content
+type: string
+length: 90
+)
+)
+folder:
+(
+name: Local
+card:
+(
+name: File_Path
+desc: "File Path"
+type: string
+length: 60
+)
+card:
+(
+name: Data
+desc: Content
+type: string
+length: 100
+)
+union:
+(
+name: G-Date-Time-Comp
+card:
+(
+name: G-Date-Time-Full
+type: string
+length: 18
+)
+folder:
+(
+name: G-Date-Time-Folder
+card:
+(
+name: G-DT-YYYYMMDD
+type: string
+length: 8
+)
+card:
+(
+name: G-DT-HHMMSS
+type: string
+length: 6
+)
+card:
+(
+name: G-DT-Rest
+type: string
+length: 4
+)
+)
+)
+)
+block:
+(
+name: Entry
+X: 40
+Y: 40
+nodelete: 1
+type: Entry
+next_block: Date&Time
+)
+block:
+(
+name: Exit
+X: 237
+Y: 511
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: WriteToFile
+X: 220
+Y: 342
+type: DiskIO
+DiskIO:
+(
+)
+next_block: CloseFile
+)
+block:
+(
+name: CloseFile
+X: 221
+Y: 430
+type: DiskIO
+DiskIO:
+(
+)
+next_block: Exit
+)
+block:
+(
+name: OpenFlip
+X: 220
+Y: 260
+type: DiskIO
+DiskIO:
+(
+)
+next_block: WriteToFile
+)
+block:
+(
+name: Date&Time
+X: 93
+Y: 24
+type: System
+System:
+(
+function: DateTime
+operand1: Local.G-Date-Time-Comp.G-Date-Time-Full
+)
+next_block: Success?
+)
+block:
+(
+name: usage
+X: 219
+Y: 146
+type: Compute
+Assign:
+(
+assign: "Local.File_Path <- \"/opt/home/peri/log/858/SuperDardashaUsage_Success_\" + Local.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-YYYYMMDD "
+assign: "Local.Data <- \"\\n\" + Local.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-HHMMSS + \",\" + GSS7.ISUP-Message-In.IAMX.IAM-CGPN.IAM-CGPN-ADDRESS + \",\" + Parmeters.Content "
+)
+next_block: OpenFlip
+)
+block:
+(
+name: Connector20
+X: 390
+Y: 276
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector21
+)
+block:
+(
+name: Connector21
+X: 390
+Y: 358
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector22
+)
+block:
+(
+name: Connector22
+X: 390
+Y: 446
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Connector1
+)
+block:
+(
+name: Success?
+X: 219
+Y: 24
+type: Switch
+Switch:
+(
+else: Failed
+built: 1
+comparand: "Success: Parmeters.Success == System.True "
+caseblock:
+(
+name: Success
+X: 218
+Y: 106
+nodelete: 1
+noicon: 1
+type: Case
+next_block: usage
+)
+caseblock:
+(
+name: Failed
+X: 344
+Y: 43
+nodelete: 1
+noicon: 1
+type: Case
+next_block: usage1
+)
+)
+)
+block:
+(
+name: usage1
+X: 342
+Y: 147
+type: Compute
+Assign:
+(
+assign: "Local.File_Path <- \"/opt/home/peri/log/858/SuperDardashaUsage_Failed_\" + Local.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-YYYYMMDD "
+assign: "Local.Data <- \"\\n\" + Local.G-Date-Time-Comp.G-Date-Time-Folder.G-DT-HHMMSS + \",\" + GSS7.ISUP-Message-In.IAMX.IAM-CGPN.IAM-CGPN-ADDRESS + \",\" + Parmeters.Content "
+)
+next_block: OpenFlip
+)
+block:
+(
+name: Connector1
+X: 390
+Y: 511
+type: Connector
+Connector:
+(
+type: anon
+)
+next_block: Exit
+)
+)
+next_block: System2
+)
+block:
+(
+name: Comput1111
+X: 432
+Y: 526
+type: Compute
+Assign:
+(
+assign: "Local.Logging <- \"Buy Validity,Status:\" + Paramters.Status "
+)
+next_block: Logging
+)
+block:
+(
+name: Refer11
+X: 769
+Y: 518
+type: Reference
+Reference:
+(
+parm: System.False
+parm: Local.Logging
+refers_to: Logging
+)
+next_block: Refer153
+)
+block:
+(
+name: Comput11111
+X: 696
+Y: 526
+type: Compute
+Assign:
+(
+assign: "Local.Logging <- \"Buy Validity,Status:\" + Paramters.Status "
+)
+next_block: Refer11
+)
+block:
+(
+name: Refer153
+X: 815
+Y: 423
+type: Reference
+Reference:
+(
+refers_to: System2
+)
+next_block: Refer2
+)
+)
+)

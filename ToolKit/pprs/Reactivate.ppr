@@ -1,0 +1,1113 @@
+program:
+(
+time: 1211104453
+vers: 3.0
+opt:
+(
+opt:
+(
+key: O
+string: DSSIETSI
+)
+)
+gencompat: 0
+)
+folder:
+(
+name: System
+global: 1
+readonly: 1
+card:
+(
+name: True
+desc: "The system constant True"
+type: boolean
+readonly: 1
+length: 1
+cval: True
+)
+card:
+(
+name: False
+desc: "The system constant False"
+type: boolean
+readonly: 1
+length: 1
+cval: False
+)
+folder:
+(
+name: Constants
+readonly: 1
+card:
+(
+name: MSTokenLen
+desc: "The number of storage characters (bytes) used by an MS Token"
+type: number
+readonly: 1
+length: 2
+cval: 41
+)
+card:
+(
+name: EmptyMSToken
+desc: "An MS Token with a constant empty value"
+type: MStoken
+readonly: 1
+)
+card:
+(
+name: Spaces
+desc: "The system constant all blanks"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: " "
+)
+card:
+(
+name: Zeros
+desc: "The system constant all 0's"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: 0
+)
+card:
+(
+name: LowValues
+desc: "The system constant all binary zeros"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \00
+)
+card:
+(
+name: HighValues
+desc: "The system constant all binary ones"
+type: string
+readonly: 1
+fig: 1
+length: 1
+cval: \7f
+)
+card:
+(
+name: None
+desc: "The string 'None'"
+type: string
+readonly: 1
+length: 4
+cval: None
+)
+card:
+(
+name: Any
+desc: "The string 'Any'"
+type: string
+readonly: 1
+length: 3
+cval: Any
+)
+card:
+(
+name: All
+desc: "The string 'All'"
+type: string
+readonly: 1
+length: 3
+cval: All
+)
+card:
+(
+name: Flush
+desc: "The string 'flush' [for DTMF/Player Resource Control]"
+type: string
+readonly: 1
+length: 5
+cval: flush
+)
+card:
+(
+name: On
+desc: "The string 'on' [for Resource Control]"
+type: string
+readonly: 1
+length: 2
+cval: on
+)
+card:
+(
+name: Off
+desc: "The string 'off' [for Resource Control]"
+type: string
+readonly: 1
+length: 3
+cval: off
+)
+card:
+(
+name: Speech
+desc: "The string 'S' [Input type 'Speech']"
+type: string
+readonly: 1
+length: 1
+cval: S
+)
+card:
+(
+name: DTMF
+desc: "The string 'D' [Input type 'DTMF']"
+type: string
+readonly: 1
+length: 1
+cval: D
+)
+)
+card:
+(
+name: LastSelection
+desc: "The most recent value entered in a Select Block"
+type: string
+readonly: 1
+length: 1
+)
+card:
+(
+name: LastEntry
+desc: "The most recent value entered in a Read Phone Block"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: LastEntryLen
+desc: "The number of characters in LastEntry"
+type: number
+readonly: 1
+length: 3
+)
+card:
+(
+name: LastCondition
+desc: "The name of the most recently occurring condition"
+type: string
+readonly: 1
+length: 12
+)
+card:
+(
+name: ConditionData
+desc: "The optional data from the most recently occurring condition"
+type: string
+readonly: 1
+length: 128
+)
+card:
+(
+name: ItemPrefix
+desc: "The language prefix for the current vocabulary"
+type: string
+length: 10
+)
+card:
+(
+name: DialedNumber
+desc: "The dialed number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: DialedNumberLen
+desc: "The length of DialedNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: CallerNumber
+desc: "The caller's number"
+type: string
+readonly: 1
+length: 36
+)
+card:
+(
+name: CallerNumberLen
+desc: "The length of CallerNumber"
+type: number
+readonly: 1
+length: 2
+)
+card:
+(
+name: AutoDetectTime
+desc: "Auto_Identify input detect timeout (in seconds)"
+type: number
+length: 7
+cval: 10
+)
+card:
+(
+name: DefaultCID
+desc: "Default Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultOutPool
+desc: "Default Pool for Transfer"
+type: string
+readonly: 1
+length: 128
+cval: line.out
+)
+card:
+(
+name: TransferCID
+desc: "Transfer Connection ID"
+type: string
+readonly: 1
+length: 40
+)
+card:
+(
+name: DefaultTTSRsc
+desc: "Default Text-to-Speech Resource"
+type: string
+length: 128
+cval: extts-b
+)
+card:
+(
+name: ApplicationNumber
+desc: "The application number"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: SystemNumber
+desc: "The system number on which the application is executing"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: CallNotConnected
+desc: "True if the application is not connected to a call"
+type: boolean
+readonly: 1
+length: 1
+)
+card:
+(
+name: NumberOfRecords
+desc: "The number of deleted records in Delete operation with generic key"
+type: number
+readonly: 1
+length: 6
+)
+card:
+(
+name: RecordLength
+desc: "The length of a retrieved record or recorded caller message"
+type: number
+readonly: 1
+length: 5
+)
+card:
+(
+name: TTSRscMode
+desc: "Text-to-Speech Resource mode"
+type: string
+length: 64
+cval: NORM
+)
+folder:
+(
+name: SQL_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from RDBMS server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: RdbmsMsg
+desc: "Return Error/Info Message from RDBMS server"
+type: string
+readonly: 1
+length: 256
+)
+)
+folder:
+(
+name: CORBA_Info
+readonly: 1
+card:
+(
+name: return_code
+desc: "Return code from CORBA server"
+type: number
+readonly: 1
+length: 8
+)
+card:
+(
+name: CorbaMsg
+desc: "Return Error/Info Message from CORBA server"
+type: string
+readonly: 1
+length: 256
+)
+)
+union:
+(
+name: MapCursorRead
+hidden: 1
+card:
+(
+name: MapRealCursor
+type: string
+hidden: 1
+length: 6
+)
+folder:
+(
+name: MapRedefCursor
+hidden: 1
+card:
+(
+name: MapCursorRow
+type: number
+hidden: 1
+length: 3
+)
+card:
+(
+name: MapCursorCol
+type: number
+hidden: 1
+length: 3
+)
+)
+)
+union:
+(
+name: ExtendedToken
+hidden: 1
+card:
+(
+name: Full
+type: string
+hidden: 1
+length: 51
+)
+folder:
+(
+name: Section
+hidden: 1
+card:
+(
+name: Token
+type: string
+hidden: 1
+length: 41
+)
+card:
+(
+name: Extension
+type: string
+hidden: 1
+length: 10
+)
+)
+)
+)
+folder:
+(
+name: Func
+card:
+(
+name: with-offset
+type: number
+length: 2
+)
+card:
+(
+name: timer-value
+type: string
+length: 6
+)
+card:
+(
+name: name
+type: string
+length: 15
+)
+card:
+(
+name: return-value
+type: number
+length: 2
+)
+card:
+(
+name: maximum-value
+type: number
+length: 2
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+param:
+(
+name: Param
+card:
+(
+name: MSISDN
+desc: MSISDN
+type: string
+length: 9
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+folder:
+(
+name: General
+global: 1
+card:
+(
+name: etopupStatus
+type: string
+length: 1
+)
+card:
+(
+name: supervisionDate
+type: string
+length: 10
+)
+card:
+(
+name: MSG
+type: string
+length: 165
+)
+card:
+(
+name: accountValue
+type: string
+length: 14
+)
+card:
+(
+name: Output
+type: string
+length: 500
+)
+card:
+(
+name: File_Name
+type: string
+length: 50
+cval: /opt/home/peri/log/Adjustemnt_Success_YYYYMMDD
+)
+folder:
+(
+name: VASP
+card:
+(
+name: G-ToVASProLog-File
+type: string
+length: 100
+cval: /opt/home/peri/log/858/ToVASProLog_Nortel_
+)
+card:
+(
+name: G-AdjPay-Log
+type: string
+length: 100
+)
+card:
+(
+name: G-VASPRO-Log
+type: string
+length: 100
+)
+card:
+(
+name: VASP_Server_Name
+type: string
+length: 8
+cval: HOSTNAME
+)
+card:
+(
+name: VASP_File_Name
+type: string
+length: 100
+)
+card:
+(
+name: G-VASPRO-AdjPayURL
+type: string
+length: 58
+cval: "URL:\\\"http://VASPNAME:80/VASProv/adjust_payment.asp?MSISDN="
+)
+card:
+(
+name: G-VASPRO-ReactiAmmount
+type: number
+length: 12
+)
+card:
+(
+name: G-VASPRO-ReactivationURL
+type: string
+length: 54
+cval: "URL:\\\"http://VASPNAME:80/VASProv/reactivate.asp?MSISDN="
+)
+card:
+(
+name: G-VASPRO-Req-WaiveURL
+type: string
+length: 56
+cval: "URL:\\\"http://VASPNAME:80/VASProv/getWaiveInfo.asp?MSISDN="
+)
+)
+folder:
+(
+name: SuperDardasha
+card:
+(
+name: UsageFileWrite
+type: string
+length: 250
+)
+card:
+(
+name: UsageFile
+type: string
+length: 80
+)
+card:
+(
+name: SuperDardashaStatus
+type: string
+length: 1
+)
+card:
+(
+name: SuperDardashaDates
+type: string
+length: 8
+)
+card:
+(
+name: SuperDardashaFees
+type: string
+length: 1
+)
+card:
+(
+name: SuperDardashaUsage
+type: string
+length: 12
+)
+)
+card:
+(
+name: A-MSISDN
+type: string
+length: 9
+)
+card:
+(
+name: BalanceToCheckWith
+type: number
+length: 12
+)
+card:
+(
+name: AccountBalance
+type: number
+length: 12
+)
+card:
+(
+name: MonthlyFee
+type: number
+length: 12
+cval: 000000000000
+)
+card:
+(
+name: AdjustAmmount
+type: number
+length: 12
+)
+card:
+(
+name: PaymentAmmount
+type: number
+length: 12
+)
+card:
+(
+name: CardType
+type: number
+length: 5
+cval: 00001
+)
+card:
+(
+name: RechCount
+type: number
+length: 1
+cval: 0
+)
+card:
+(
+name: G-858Log-File
+type: string
+length: 220
+cval: /opt/home/peri/log/858/858Log_Nortel_
+)
+card:
+(
+name: RechargeCard
+type: string
+length: 14
+)
+card:
+(
+name: RechargeCardLength
+type: number
+length: 2
+)
+card:
+(
+name: RevivalPromo
+type: string
+length: 5
+cval: False
+)
+card:
+(
+name: G-ExpiryDates
+type: string
+length: 8
+)
+card:
+(
+name: G-Language
+type: number
+length: 1
+)
+card:
+(
+name: G-vtcpd-resource
+type: string
+length: 10
+cval: PPAS
+)
+card:
+(
+name: G-vtcpd-CID
+type: string
+length: 20
+)
+union:
+(
+name: G-Date-Time-Comp
+card:
+(
+name: G-Date-Time-Full
+type: string
+length: 18
+)
+folder:
+(
+name: G-Date-Time-Folder
+card:
+(
+name: G-DT-YYYYMMDD
+type: string
+length: 8
+)
+card:
+(
+name: G-DT-HHMMSS
+type: string
+length: 6
+)
+card:
+(
+name: G-DT-Rest
+type: string
+length: 4
+)
+)
+)
+card:
+(
+name: G-Resource-counter
+type: number
+length: 1
+)
+)
+folder:
+(
+name: VASPRO-Reactivation
+union:
+(
+name: VASPRO-React-Request
+folder:
+(
+name: Req-React-Folder
+card:
+(
+name: Reactivation_URL
+type: string
+length: 54
+)
+card:
+(
+name: msisdn
+type: string
+length: 11
+)
+card:
+(
+name: REVIVAL_FLAG
+type: string
+length: 14
+cval: &Revival_Flag=
+)
+card:
+(
+name: revival_flag
+type: string
+length: 5
+cval: False
+)
+card:
+(
+name: ADJUST_AMOUNT
+type: string
+length: 15
+cval: &ADJUST_AMOUNT=
+)
+card:
+(
+name: adjust_ammount
+type: number
+length: 12
+cval: 000000000000
+)
+card:
+(
+name: SYSidUSRaccount
+type: string
+length: 34
+cval: &SYSTEM_ID=IVR&USER_NT_ACCOUNT=IVR
+)
+)
+card:
+(
+name: Req-React-Data
+type: string
+length: 152
+)
+)
+)
+folder:
+(
+name: VASPRO-Command
+card:
+(
+name: G-Command
+type: string
+length: 300
+)
+)
+folder:
+(
+name: VASPRO-WaivedResponse
+union:
+(
+name: VASPRO-Waived-Resp
+folder:
+(
+name: Res-VASPRO-Folder
+card:
+(
+name: RequestStatus
+type: string
+length: 15
+cval: REQUEST_STATUS,
+)
+card:
+(
+name: status
+type: string
+length: 4
+)
+card:
+(
+name: WaivedCount
+type: string
+length: 15
+cval: ACTIVATE_COUNT,
+)
+card:
+(
+name: count
+type: string
+length: 5
+)
+)
+card:
+(
+name: Res-VASPRO-Data
+type: string
+length: 60
+)
+)
+)
+folder:
+(
+name: --------------------------------
+mark: 1
+)
+datafiles:
+(
+)
+block:
+(
+name: "VASP Reactivate"
+X: 0
+Y: 0
+notes: "Rolled Back to V7 but Desc for SC900 is added."
+type: Container
+Container:
+(
+looptype: 0
+loopcntl: 1
+width: 0
+height: 0
+block:
+(
+name: Entry
+X: 82
+Y: 95
+nodelete: 1
+type: Entry
+next_block: 0LEDeduct
+)
+block:
+(
+name: Exit
+X: 189
+Y: 413
+nodelete: 1
+type: Exit
+)
+block:
+(
+name: 0LEDeduct
+X: 66
+Y: 11
+type: Compute
+Assign:
+(
+assign: "General.VASP.G-VASPRO-ReactiAmmount <- 000000000000"
+)
+next_block: Reactivation
+)
+block:
+(
+name: Reactivation
+X: 173
+Y: 11
+type: Compute
+Assign:
+(
+assign: "VASPRO-Reactivation.VASPRO-React-Request.Req-React-Folder.Reactivation_URL <- General.VASP.G-VASPRO-ReactivationURL "
+assign: "VASPRO-Reactivation.VASPRO-React-Request.Req-React-Folder.msisdn <- \"20\" + Param.MSISDN "
+assign: "VASPRO-Reactivation.VASPRO-React-Request.Req-React-Folder.revival_flag <- General.RevivalPromo "
+assign: "VASPRO-Reactivation.VASPRO-React-Request.Req-React-Folder.adjust_ammount <- General.VASP.G-VASPRO-ReactiAmmount "
+assign: "VASPRO-Command.G-Command <- System.Constants.Spaces "
+assign: "VASPRO-Command.G-Command <- VASPRO-Reactivation.VASPRO-React-Request.Req-React-Data "
+)
+next_block: Handle1
+)
+block:
+(
+name: Handle1
+X: 173
+Y: 87
+type: Context
+Context:
+(
+width: 437
+height: 440
+block:
+(
+name: "    disc    "
+X: 10
+Y: 9
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: VASproDisc
+)
+block:
+(
+name: VASproDisc
+X: 42
+Y: 77
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+)
+next_block: VASPRORES
+)
+block:
+(
+name: Handle2
+X: 173
+Y: 231
+type: Context
+Context:
+(
+width: 444
+height: 337
+block:
+(
+name: "    disc    "
+X: 10
+Y: 9
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: EndApp
+)
+block:
+(
+name: EndApp
+X: 42
+Y: 72
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+)
+next_block: Exit
+)
+block:
+(
+name: VASPRORES
+X: 262
+Y: 87
+type: Resource
+Resource:
+(
+resource: generic
+wait: 1
+operation: Send
+message: VASPRO-Command.G-Command
+cid: System.DefaultCID
+resexpr: "\"htmls\" "
+)
+next_block: Handle6
+)
+block:
+(
+name: "Moving Data"
+X: 261
+Y: 231
+type: Compute
+Assign:
+(
+assign: "VASPRO-WaivedResponse.VASPRO-Waived-Resp.Res-VASPRO-Data <- System.ConditionData "
+)
+next_block: Handle2
+)
+block:
+(
+name: Handle6
+X: 262
+Y: 158
+type: Context
+Context:
+(
+width: 445
+height: 434
+block:
+(
+name: "    disc    "
+X: 6
+Y: 11
+noicon: 1
+type: Condition
+Condition:
+(
+)
+next_block: Cont&End
+)
+block:
+(
+name: Cont&End
+X: 39
+Y: 59
+type: Connector
+Connector:
+(
+type: finish
+)
+)
+)
+next_block: "Moving Data"
+)
+)
+)
